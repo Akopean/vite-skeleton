@@ -1,0 +1,15 @@
+$breakpoints: (
+  kd: 2420px,
+  hd: 1920px,
+  xl: 1440px,
+  lg: 1285px,
+  md: 992px,
+  sm: 782px,
+  xs: 480px,
+  xxs: 390px
+) !default;
+
+$containerWidth: 1320px;
+$containerPadding: 40px;
+$containerPaddingMobile: 20px;
+$fontFamily:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;

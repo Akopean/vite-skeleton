@@ -1,0 +1,23 @@
+@use "sass:math";
+// Min/Max resize fonts by media variables from resources/scss/theme/variables/_breakpoints.scss (xxs, xl)
+//Example usage: clamp-calc(20px, 60px)
+@function clamp-calc($size-at-min-width, $size-at-max-width, $min-width: get-media(xxs), $max-width: get-media(xl)) {
+
+    $slope: math.div($size-at-max-width - $size-at-min-width, $max-width - $min-width);
+    $y-axis-intersection: -1 * $min-width * $slope + $size-at-min-width;
+  
+    @return clamp(#{$size-at-min-width}, #{$y-axis-intersection} + #{$slope} * 100vw, #{$size-at-max-width});
+  }
+  
+  @mixin adaptive-value($property, $startSize, $minSize, $size: 320) {
+    $addSize: $startSize - $minSize;
+  
+    #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$size + px}) / #{$containerWidth - $size}));
+  }
+  
+  @mixin adaptive-value-px($property, $startSize, $minSize, $size: 320) {
+    $addSize: $startSize - $minSize;
+  
+    #{$property}: calc(#{$minSize + px} + (#{$startSize} - #{$minSize}) * ((100vw - #{$size + px}) / #{$containerWidth - $size}));
+  }
+  

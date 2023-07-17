@@ -1,0 +1,7 @@
+@import "variables";
+
+:root {
+  @each $name, $breakpoint in $breakpoints {
+    #{--breakpoint-}#{$name}: $breakpoint;
+  }
+}

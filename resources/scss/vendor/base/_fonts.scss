@@ -1,0 +1,10 @@
+/* stylelint-disable */
+@import "variables";
+
+//Fonts format needs ttf, woff, woff2
+//Convert fonts https://cloudconvert.com/
+body {
+  --font-primary: #{$fontFamily};
+  --font-size--body: 1rem;
+  --line-height--body: 100%;
+}

@@ -1,0 +1,37 @@
+a.btn,
+.btn {
+  font-family: var(--font-primary);
+  background: gray;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  min-width: 160px;
+  padding: 16px 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 16px;
+  font-size: var(--sk-text-base-size);
+  font-weight: 700;
+  overflow: hidden;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  @include breakpoint-down('sm') {
+    display: flex;
+    width: 100%;
+  }
+
+  @include transition;
+  @include fontSmooth;
+
+  &:hover,
+  &:active {
+    color: gray;
+    border-color: gray;
+    background: white;
+  }
+}

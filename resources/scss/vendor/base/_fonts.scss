@@ -5,6 +5,6 @@
 //Convert fonts https://cloudconvert.com/
 body {
   --font-primary: #{$fontFamily};
-  --font-size--body: 1rem;
-  --line-height--body: 100%;
+  --font-size--body: #{$fontSize};
+  --line-height--body: #{$lineHeight};
 }

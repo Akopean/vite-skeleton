@@ -6,10 +6,17 @@ $breakpoints: (
   md: 992px,
   sm: 782px,
   xs: 480px,
-  xxs: 390px
+  xxs: 375px
 ) !default;
 
 $containerWidth: 1320px;
 $containerPadding: 40px;
 $containerPaddingMobile: 20px;
-$fontFamily:  "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontFamily:   'Karla', sans-serif;
+$fontSize: 1rem;
+$lineHeight: 100%;
+
+$Cyan400: hsl(179, 62%, 43%);
+$Bright400: hsl(71, 73%, 54%);
+$Light300:hsl(204, 43%, 93%);
+$Gray500: hsl(218, 22%, 67%);
